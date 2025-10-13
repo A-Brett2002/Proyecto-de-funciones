@@ -13,5 +13,9 @@ app.set('views', path.join(__dirname, 'src/views'));
 const mainRoutes = require('./src/routers/main.routes');
 app.use('/', mainRoutes);
 
+app.use ('/market', require('./src/routers/market.router'));
+
+
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT,() => console.log(`http://localhost:${PORT}`));

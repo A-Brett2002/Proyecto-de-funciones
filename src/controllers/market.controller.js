@@ -10,23 +10,23 @@ const productos=[
     {id:9, nombre:"Tablets", precio:900},
     {id:10, nombre:"Laptops", precio:1000}
 ]
-export const getProducts=(req,res)=>{
-    res.json(productos);
+const index=(req,res)=>{
+    res.render( 'market/index', { productos });
 }
 
-export const getProductById=(req,res)=>{
+const getProductById=(req,res)=>{
     const {id}=req.params;
     const product=productos.find(producto=>producto.id==id);
     res.json(product);
 }
 
-export const createProduct=(req,res)=>{
+const createProduct=(req,res)=>{
     const {id,nombre,precio}=req.body;
     const newProduct={id,nombre,precio};
     productos.push(newProduct);
     res.json(productos);
 }
-export const updateProduct=(req,res)=>{
+const updateProduct=(req,res)=>{
     const {id}=req.params;
     const {nombre,precio}=req.body;
     const product=productos.find(producto=>producto.id==id);
@@ -34,9 +34,16 @@ export const updateProduct=(req,res)=>{
     product.precio=precio;
     res.json(productos);
 }
-export const deleteProduct=(req,res)=>{
+const deleteProduct=(req,res)=>{
     const {id}=req.params;
     const index=productos.findIndex(producto=>producto.id==id);
     productos.splice(index,1);
     res.json(productos);
+}
+module.exports={
+    index,
+    getProductById,
+    createProduct,
+    updateProduct,
+    deleteProduct
 }
