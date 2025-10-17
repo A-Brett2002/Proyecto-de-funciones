@@ -1,0 +1,14 @@
+body {
+    background-image: url('https://img.freepik.com/vector-gratis/pago-mercancias-tienda-online-ordenador_88138-702.jpg?semt=ais_hybrid&w=740&q=80');
+    background-size: contain;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+h1 {
+    color: #ea0303;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 45px;
+}

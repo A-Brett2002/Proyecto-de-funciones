@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Electrónicos</title>
 </head>
@@ -10,20 +11,27 @@
         <nav>
             <ul>
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/productos">Productos</a></li>
-                <li><a href="/productos/nuevo">Crear Producto</a></li>
+                <li><a href="../create">Crear Producto</a></li>
             </ul>
         </nav>
     </header>
     <h1>Productos</h1>
-    <ul>
-        <% productos.forEach(producto => { %>
-            <li>
-                <h2><%= producto.nombre %></h2>
-                <p>Precio: $<%= producto.precio %></p>
-                <a href="/productos/<%= producto.id %>">Ver detalles</a>
-            </li>
-        <% }) %>
-    </ul>
+    <main>
+        <section class="productos">
+            <% productos.forEach(producto => { %>
+                <article class="producto">
+                    <h2><%= producto.nombre %></h2>
+                    <p>Precio: $<%= producto.precio %></p>
+                    <a href="/productos/<%= producto.id %>">Ver Detalles</a>
+                </article>
+            <% }) %>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        Todos los derechos reservados a  Market Electronic`s &copy; 2025
+        <hr>
+        <p>creado por Andy y Angel</p>
+    </footer>
 </body>
 </html>

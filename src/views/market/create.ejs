@@ -7,11 +7,17 @@
 </head>
 <body>
     <h1>Crear Producto</h1>
-    <form action="/productos" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+    <p>Formulario de creación de producto</p>
+    <form action="/market/create" method="POST">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea><br>
+
         <label for="precio">Precio:</label>
-        <input type="number" id="precio" name="precio" required>
+        <input type="number" id="precio" name="precio" required><br>
+
         <button type="submit">Crear Producto</button>
     </form>
 </body>

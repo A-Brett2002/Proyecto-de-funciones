@@ -1,7 +1,9 @@
 body {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/013/948/020/non_2x/world-map-connection-with-electronic-circuit-board-futuristic-modern-website-background-or-cover-page-for-technology-and-finance-concept-and-education-future-company-vector.jpg');
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
-    background-color: #529393;
-    margin: 0;
+    margin: 150px;
     padding: 20px;
 }
 
@@ -43,4 +45,19 @@ button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+}
+nav{
+   table-layout: fixed;
+   width: 100%;
+   margin: 20px 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+whatsapp{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
 }
